@@ -42,16 +42,17 @@
   list-style: none;
 }
 
-.Weather img {
-  padding-left: 20px;
-  margin-bottom: 20px;
-  margin-right: 5px;
-
+.Weather canvas {
+  margin-right: 15px;
+  padding-top: 30px;
+  margin-left: 40px;
 }
 
 .Weather .temperature {
   font-size: 70px;
   font-weight: 300;
+  position: relative;
+  top: -12px;
 }
 
 .Weather .unit {
