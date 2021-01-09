@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import Loader from 'react-loader-spinner';
 import "./Weather.css";
 
@@ -10,6 +11,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       iconUrl: `http://openweathermap.org/img/wn/10d@2x.png`,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -37,7 +39,7 @@ export default function Weather(props) {
         </form>
         <h2 className="cityName">{weatherData.city}</h2>
         <ul>
-          <li>Last updated: Saturday 15.00</li>
+          <li><FormattedDate date={weatherData.date} /></li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row">
