@@ -1,0 +1,15 @@
+.Forecast {
+    text-align: center;
+    padding: 20px;
+}
+
+.Forecast canvas {
+    display: block;
+    margin: 5px auto;
+    padding: 0;
+}
+
+.col {
+    margin: 10px auto;
+    padding: 0;
+}

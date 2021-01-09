@@ -2,7 +2,7 @@
   border: 0.5px solid rgb(53, 70, 102);
   border-radius: 4px;
   margin: 10px auto;
-  color: rgb(53, 70, 102);
+  color: #354666;
 }
 
 .Weather form {
@@ -42,7 +42,7 @@
   list-style: none;
 }
 
-.Weather canvas {
+.Weather .mainIcon {
   margin-right: 15px;
   padding-top: 30px;
   margin-left: 40px;
@@ -62,7 +62,7 @@
 }
 
 .Weather .extraData {
-  margin-top: 18px;
+  margin-top: 4px;
   padding-left: 35px;
   font-size: 18px;
 }
