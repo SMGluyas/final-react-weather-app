@@ -34,6 +34,23 @@ export default function Weather(props) {
     findWeatherInfo();
   }
 
+  function findLocalWeatherInfo(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    const apiKey = "275de0c841d02a257509e4dea098d5d3";
+    let geoLocationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(geoLocationUrl).then(handleResponse);
+  }
+
+  function getCurrentPosition() {
+    navigator.geolocation.getCurrentPosition(findLocalWeatherInfo);
+  }
+
+  function handleLocationSubmit(event) {
+    event.preventDefault();
+    getCurrentPosition();
+  }
+
   function updateCity(event) {
     setCity(event.target.value);
   }
@@ -50,7 +67,7 @@ export default function Weather(props) {
               <input type="submit" value="Search" className="btn btn-primary" />
             </div>
             <div className="col-1">
-              <button className="btn btn-success"><i className="fas fa-map-marker-alt"></i></button>
+              <button className="btn btn-success" onClick={handleLocationSubmit}><i className="fas fa-map-marker-alt"></i></button>
             </div>
           </div>
         </form>
