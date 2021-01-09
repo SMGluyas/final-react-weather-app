@@ -1,0 +1,67 @@
+.Weather {
+  border: 0.5px solid rgb(53, 70, 102);
+  border-radius: 4px;
+  margin: 10px auto;
+  color: rgb(53, 70, 102);
+}
+
+.Weather form {
+  margin: 10px auto;
+  padding: 15px 40px;
+}
+
+.Weather .col-2 {
+  padding: 0;
+}
+
+.Weather .btn-primary {
+  background-color: rgb(53, 70, 102);
+  border: grey;
+}
+.Weather .col-1 {
+  padding: 0;
+}
+
+.Weather .btn-success {
+  background-color: rgb(68, 131, 68);
+  border:grey;
+}
+
+.Weather h2 {
+  margin: 10px 30px 0;
+  padding: 0 10px;
+}
+
+.Weather ul {
+  margin: 0;
+}
+
+.Weather li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Weather img {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+
+}
+
+.Weather .temperature {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+.Weather .unit {
+  font-size: 18px;
+  position: relative;
+  top: -26px;
+}
+
+.Weather .extraData {
+  margin-top: 18px;
+  padding-left: 35px;
+  font-size: 18px;
+}
