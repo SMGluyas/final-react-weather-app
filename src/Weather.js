@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
 import Loader from 'react-loader-spinner';
+import overcast from "./BackgroundImages/overcast.jpg";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -57,7 +58,7 @@ export default function Weather(props) {
   
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="Weather" style={{ backgroundImage: `url(${overcast})`}}>
         <form onSubmit={handleSubmit}> 
           <div className="row">
             <div className="col-9">
