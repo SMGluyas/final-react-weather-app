@@ -2,6 +2,7 @@
   font-family: "Catamaran", sans-serif;
   margin: 20px auto;
   max-width: 700px;
+  min-width: 700px;
 }
 
 .App h1 {
